@@ -1,0 +1,262 @@
+-------------------------------------------------
+Error Log - 12:11 am
+WebPage Name: ManagePatient
+Message: Cannot add or update a child row: a foreign key constraint fails (`hospitalinfosysdb`.`patientrecord`, CONSTRAINT `patientrecord_ibfk_1` FOREIGN KEY (`RoomID`) REFERENCES `rooms` (`ID`) ON DELETE SET NULL)
+Stack Trace:    at MySql.Data.MySqlClient.MySqlStream.<ReadPacketAsync>d__30.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MySql.Data.MySqlClient.NativeDriver.<GetResultAsync>d__45.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MySql.Data.MySqlClient.Driver.<GetResultAsync>d__85.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MySql.Data.MySqlClient.Driver.<NextResultAsync>d__84.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MySql.Data.MySqlClient.MySqlDataReader.<NextResultAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MySql.Data.MySqlClient.MySqlDataReader.<NextResultAsync>d__97.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at MySql.Data.MySqlClient.MySqlCommand.<ExecuteReaderAsync>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MySql.Data.MySqlClient.MySqlCommand.<ExecuteReaderAsync>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at MySql.Data.MySqlClient.MySqlCommand.<ExecuteReaderAsync>d__107.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MySql.Data.MySqlClient.MySqlCommand.<ExecuteNonQueryAsync>d__96.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveConsultation_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 102
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:13 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:13 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:13 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:14 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:14 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:14 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:14 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:14 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:14 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:14 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:14 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:14 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:14 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:14 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:15 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:15 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:15 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:15 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:15 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:15 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:15 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:15 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:15 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:15 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 12:16 am
+WebPage Name: ManagePatient
+Message: Column 'PATID' does not belong to table .
+Stack Trace:    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at HospitalInfoSys.Admin.ManagePatient.btnSaveProfile_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 155
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 11:35 am
+WebPage Name: ManagePatient
+Message: Object reference not set to an instance of an object.
+Stack Trace:    at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at MySql.Data.MySqlClient.MySqlPoolManager.<GetPoolAsync>d__21.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at MySql.Data.MySqlClient.MySqlConnection.<OpenAsync>d__91.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at HospitalInfoSys.Admin.ManagePatient.LoadRoomList() in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\ManagePatient.aspx.cs:line 296
+-------------------------------------------------
