@@ -79,7 +79,7 @@ namespace HospitalInfoSys.Admin
         protected void btn_add_Click(object sender, EventArgs e)
         {
             reset();
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseModal", "closeModal();", true);
+          ScriptManager.RegisterStartupScript(this, this.GetType(), "Open", "openModal(0);", true);
         }
         public void reset()
         {
@@ -110,7 +110,7 @@ namespace HospitalInfoSys.Admin
                 HiddenField hd_idselect = (HiddenField)item.FindControl("hd_id");
                 HiddenField hd_name = (HiddenField)item.FindControl("hd_name");
                 HiddenField hd_status = (HiddenField)item.FindControl("hd_status");
-            
+                reset();
                 get_data(hd_idselect.Value);
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "EditModal", "openModal(" + hd_idselect.Value + ");", true);
             }
@@ -143,7 +143,9 @@ namespace HospitalInfoSys.Admin
                         txtContactNo.Text= rdr["ContactNo"].ToString();
                       txtEmail.Text = rdr["Email"].ToString();
                        dprole.Text = rdr["Role"].ToString();
-                        dpstatus.SelectedValue = rdr["isApproved"].ToString();
+                        int isApproved = Convert.ToBoolean(rdr["isApproved"]) ? 1 : 0;
+                        dpstatus.SelectedValue = isApproved.ToString();
+                    
                         rfvPassword.Enabled = false;
                         rfvConfirmPassword.Enabled = false;
 

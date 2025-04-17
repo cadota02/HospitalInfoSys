@@ -76,7 +76,7 @@ namespace HospitalInfoSys.Admin
         protected void btn_add_Click(object sender, EventArgs e)
         {
             reset();
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseModal", "closeModal();", true);
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "Open", "openModal(0);", true);
         }
         public void reset()
         {

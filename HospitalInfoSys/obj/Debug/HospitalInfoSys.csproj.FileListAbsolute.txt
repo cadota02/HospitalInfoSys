@@ -160,4 +160,3 @@ C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\bin\de\PdfSharp.Chart
 C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\obj\Debug\HospitalInfoSys.csproj.CopyComplete
 C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\obj\Debug\HospitalInfoSys.dll
 C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\obj\Debug\HospitalInfoSys.pdb
-C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\obj\Debug\HospitalInfoSys.csprojAssemblyReference.cache

@@ -74,7 +74,7 @@
                                                           <asp:LinkButton ID="btn_reset" CssClass="btn btn-default" 
                                                          runat="server" onclick="btn_reset_Click" BackColor="#999999">Refresh</asp:LinkButton>
                                                         <asp:LinkButton ID="btn_add"  CssClass="btn btn-success" runat="server" 
-                                     OnClientClick="openModal(0); return false;"  OnClick="btn_add_Click">Register User</asp:LinkButton>
+                                       OnClick="btn_add_Click">Register User</asp:LinkButton>
                                                 </div>
                                              
                                                   </div>
@@ -193,7 +193,6 @@
                 <asp:DropDownList ID="dpstatus" runat="server" CssClass="form-control">
                     <asp:ListItem Text="Inactive" Value="0"></asp:ListItem>
                     <asp:ListItem Text="Active" Value="1"></asp:ListItem>
-             
                 </asp:DropDownList>
             </div>
            </div>

@@ -74,7 +74,7 @@
                                                           <asp:LinkButton ID="btn_reset" CssClass="btn btn-default" 
                                                          runat="server" onclick="btn_reset_Click" BackColor="#999999">Refresh</asp:LinkButton>
                                                         <asp:LinkButton ID="btn_add"  CssClass="btn btn-success" runat="server" 
-                                     OnClientClick="openModal(0); return false;"  OnClick="btn_add_Click">Add Room</asp:LinkButton>
+                                     OnClick="btn_add_Click">Add Room</asp:LinkButton>
                                                 </div>
                                              
                                                   </div>
@@ -140,7 +140,7 @@
         <div class="form-group">
         <div class="col-sm-12">
             <label class="form-label">Room Number</label>
-                <asp:TextBox ID="txtroomno" runat="server" CssClass="form-control" placeholder="Enter room number"></asp:TextBox>
+                <asp:TextBox ID="txtroomno" runat="server" TextMode="Number" CssClass="form-control" placeholder="Enter room number"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="rfvFirstName" runat="server" ControlToValidate="txtroomno" ErrorMessage="room number is required." CssClass="text-danger" Display="Dynamic"  ValidationGroup="add"></asp:RequiredFieldValidator>
             </div>
            <div class="col-sm-12">

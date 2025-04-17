@@ -75,7 +75,7 @@
                                                           <asp:LinkButton ID="btn_reset" CssClass="btn btn-default" 
                                                          runat="server" onclick="btn_reset_Click" BackColor="#999999">Refresh</asp:LinkButton>
                                                         <asp:LinkButton ID="btn_add"  CssClass="btn btn-success" runat="server" 
-                                     OnClientClick="openModal(0); return false;"  OnClick="btn_add_Click">Add Service</asp:LinkButton>
+                                     OnClick="btn_add_Click">Add Service</asp:LinkButton>
                                                 </div>
                                              
                                                   </div>
