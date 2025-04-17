@@ -280,7 +280,7 @@
 
                               <div class="col-md-4">
                                 <div class="form-group">
-                                  <label>Doctor ID</label>
+                                  <label>Doctor </label>
                                  <asp:DropDownList ID="ddlDoctor" runat="server" CssClass="form-control" AppendDataBoundItems="true">
                               
                                 </asp:DropDownList>

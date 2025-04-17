@@ -338,6 +338,104 @@ namespace HospitalInfoSys.Admin
                 rfvdateapproved.Enabled = false;
             }
         }
+        public string GenerateHealthNo()
+        {
+            string healthno = "";
+            string prefix = DateTime.Now.ToString("yyMMdd");
+            using (MySqlConnection con = new MySqlConnection(connString))
+            {
+                con.Open();
+                string query = $"SELECT MAX(PID) FROM patientlist WHERE HEALTHNO LIKE '{prefix}%'";
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                object result = cmd.ExecuteScalar();
+                int nextId = (result != DBNull.Value) ? Convert.ToInt32(result) + 1 : 1;
+                healthno = $"{prefix}-{nextId.ToString("D5")}";
+            }
+            return healthno;
+        }
+        protected void btn_newpat_Click(object sender, EventArgs e)
+        {
+            LinkButton btn_select = (LinkButton)sender;
+            GridViewRow item = (GridViewRow)btn_select.NamingContainer;
+
+            HiddenField hd_idselect = (HiddenField)item.FindControl("hd_id");
+            HiddenField hdFirstname = (HiddenField)item.FindControl("hdFirstname");
+            HiddenField hdLastname = (HiddenField)item.FindControl("hdLastname");
+            HiddenField hdBirthDate = (HiddenField)item.FindControl("hdBirthDate");
+            HiddenField hdSex = (HiddenField)item.FindControl("hdSex");
+        
+            bool isexist = PatientExists(hdFirstname.Value, hdLastname.Value, DateTime.Parse(hdBirthDate.Value), hdSex.Value);
+            if (!isexist)
+            {
+                InsertPatientFromAppointment(int.Parse(hd_idselect.Value));
+
+            }
+            else
+            {
+                ShowMessage("Patient already exist in patient list!", "");
+            }
+        }
+        private bool PatientExists( string firstName, string lastName, DateTime birthDate, string sex)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                conn.Open();
+                string query = @"
+                        SELECT COUNT(*) FROM patientlist
+                        WHERE (FIRSTNAME = @FirstName AND LASTNAME = @LastName AND BIRTHDATE = @BirthDate and Sex=@Sex);
+    ";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                 
+                    cmd.Parameters.AddWithValue("@FirstName", firstName);
+                    cmd.Parameters.AddWithValue("@LastName", lastName);
+                    cmd.Parameters.AddWithValue("@BirthDate", birthDate);
+                    cmd.Parameters.AddWithValue("@Sex", sex);
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    return count > 0;
+                }
+            }
+        }
+        protected void InsertPatientFromAppointment(int appointmentId)
+        {
+
+
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                conn.Open();
+
+                string query = @"
+                        INSERT INTO patientlist (
+                            HEALTHNO, FIRSTNAME, LASTNAME, MIDDLENAME, ADDRESS, CONTACTNO, EMAIL, SEX, BIRTHDATE, DATEREGISTERED
+                        )
+                        SELECT
+                            @healthno, Firstname, Lastname, Middlename, Address, ContactNo, Email, Sex, BirthDate, CURDATE()
+                        FROM appointments
+                        WHERE ID = @AppointmentID;
+                    ";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@AppointmentID", appointmentId);
+                    cmd.Parameters.AddWithValue("@healthno", GenerateHealthNo());
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        ShowMessage("Patient added successfully!", "");
+                       
+
+                    }
+                    else
+                    {
+                        ShowMessage("No appointment found with that ID.", "");
+                  
+
+                    }
+                }
+            }
+        }
     }
 
 }

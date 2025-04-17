@@ -67,7 +67,7 @@
                 <label for="Email">Email</label>
                 <asp:TextBox ID="Email" runat="server" CssClass="form-control" placeholder="Email"/>
                 <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="Email" InitialValue="" 
-                    ErrorMessage="Email is required" ForeColor="Red" />
+                    ErrorMessage="Email is required" ForeColor="Red" Font-Size="Smaller"/>
                 <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="Email"
                     ValidationExpression="^[^@\s]+@[^@\s]+\.[^@\s]+$" ErrorMessage="Invalid email format" ForeColor="Red" Font-Size="Smaller"/>
             </div>

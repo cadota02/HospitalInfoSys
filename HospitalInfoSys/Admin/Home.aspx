@@ -157,7 +157,7 @@
                            <asp:TemplateField>
                                         <HeaderTemplate> Appt. No </HeaderTemplate>
                                      <ItemTemplate>
-                                         <asp:HyperLink ID="HyperLink1" runat="server"  Text='<%# Eval("AppointmentNumber") %>' Target="_blank" NavigateUrl='<%# "~/Content/pdf/" + Eval("AppointmentNumber") +".pdf" %> '></asp:HyperLink>
+                                         <asp:HyperLink ID="HyperLink1" runat="server"  Text='<%# Eval("AppointmentNumber") %>' Target="_blank" NavigateUrl='<%#  "~/AppointmentPrint?id=" + Eval("ID") %> '></asp:HyperLink>
 
                                            </ItemTemplate>
                                    </asp:TemplateField>
@@ -178,7 +178,12 @@
                                       <asp:HiddenField ID="hd_id" Value='<%#Eval("ID") %>' runat="server"></asp:HiddenField>
                            <asp:HiddenField ID="hd_status" Value='<%#Eval("Status") %>' runat="server"></asp:HiddenField>
                                       <asp:HiddenField ID="hd_name" Value='<%#Eval("Fullname") %>' runat="server"></asp:HiddenField>
-                                      <asp:LinkButton ID="btn_select" CssClass="btn btn-primary btn-xs "  CommandArgument='<%# Eval("ID") %>' onclick="btn_select_Click"  runat="server" >Edit</asp:LinkButton>
+                                         <asp:HiddenField ID="hdFirstname" Value='<%#Eval("Firstname") %>' runat="server"></asp:HiddenField>
+                                         <asp:HiddenField ID="hdLastname" Value='<%#Eval("Lastname") %>' runat="server"></asp:HiddenField>
+                                         <asp:HiddenField ID="hdBirthDate" Value='<%#Eval("BirthDate") %>' runat="server"></asp:HiddenField>
+                                         <asp:HiddenField ID="hdSex" Value='<%#Eval("Sex") %>' runat="server"></asp:HiddenField>
+                                      <asp:LinkButton ID="btn_select" CssClass="btn btn-primary btn-xs "  CommandArgument='<%# Eval("ID") %>' onclick="btn_select_Click"  runat="server" >Manage</asp:LinkButton>
+                                            <asp:LinkButton ID="btn_newpat" CssClass="btn btn-success btn-xs "  CommandArgument='<%# Eval("ID") %>' onclick="btn_newpat_Click"  runat="server" >New Patient</asp:LinkButton>
                                       <asp:LinkButton ID="btn_delete" CssClass="btn btn-danger btn-xs " onclick="btn_delete_Click" runat="server"
                                       OnClientClick="return getConfirmation_verify();"
                                        >Remove</asp:LinkButton>

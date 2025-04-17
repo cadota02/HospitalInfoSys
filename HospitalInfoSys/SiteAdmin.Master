@@ -74,6 +74,7 @@
                         <li><a runat="server" href="~/PatientRecord">Patient Record</a></li>
                         <li><a runat="server" href="~/ManageRoom">Room</a></li>
                         <li><a runat="server" href="~/ManageServices">Services</a></li>
+                        <li><a runat="server" href="~/ContactMessages">Contacts/Messages</a></li>
                           <li><a runat="server" href="~/ManageUser">Account</a></li>
                           <li>    <asp:LoginStatus ID="LoginStatus1" runat="server" ></asp:LoginStatus>
                                 <asp:HiddenField ID="hd_userid" runat="server"></asp:HiddenField>

@@ -157,7 +157,7 @@ C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\bin\Microsoft.AspNet.
 C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\bin\de\PdfSharp.resources.dll
 C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\bin\de\PdfSharp.Charting.resources.dll
-C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\obj\Debug\HospitalInfoSys.csprojAssemblyReference.cache
 C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\obj\Debug\HospitalInfoSys.csproj.CopyComplete
 C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\obj\Debug\HospitalInfoSys.dll
 C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\obj\Debug\HospitalInfoSys.pdb
+C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\obj\Debug\HospitalInfoSys.csprojAssemblyReference.cache

@@ -244,6 +244,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin\Contacts.aspx" />
     <Content Include="Admin\Home.aspx" />
     <Content Include="Admin\ManagePatient.aspx" />
     <Content Include="Admin\ManageUser.aspx" />
@@ -322,6 +323,13 @@
     <Content Include="SiteAdmin.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Contacts.aspx.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Contacts.aspx.designer.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -343,7 +351,6 @@
     <Compile Include="Admin\ManageUser.aspx.designer.cs">
       <DependentUpon>ManageUser.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\PatientDAL.cs" />
     <Compile Include="Admin\Patients.aspx.cs">
       <DependentUpon>Patients.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

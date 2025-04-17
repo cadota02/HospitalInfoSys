@@ -11,9 +11,38 @@ namespace HospitalInfoSys
 {
     public partial class _Default : Page
     {
+        string connString = ConfigurationManager.ConnectionStrings["myconnection"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+
+            if (!IsPostBack)
+            {
+                LoadServices();
+            }
+        }
+
+        private void LoadServices()
+        {
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT ID, ServiceName, Description, Price FROM services WHERE IsActive = 1";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    rptServices.DataSource = dt;
+                    rptServices.DataBind();
+                }
+                catch (Exception ex)
+                {
+                    // Handle error (optional logging)
+                    Response.Write("Error: " + ex.Message);
+                }
+            }
         }
         public void testconnection()
         {

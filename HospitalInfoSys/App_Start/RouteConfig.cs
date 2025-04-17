@@ -20,7 +20,8 @@ namespace HospitalInfoSys
             routes.MapPageRoute("adminservice", "ManageServices", "~/Admin/Services.aspx");
             routes.MapPageRoute("adminpatrecord", "PatientRecord", "~/Admin/Patients.aspx");
             routes.MapPageRoute("adminpatmanage", "ManagePatient", "~/Admin/ManagePatient.aspx");
-              routes.MapPageRoute("report", "Report", "~/Report.aspx");
+            routes.MapPageRoute("admincontacts", "ContactMessages", "~/Admin/Contacts.aspx");
+            routes.MapPageRoute("report", "Report", "~/Report.aspx");
             routes.MapPageRoute("reportpatient", "PatientPrint", "~/Admin/PrintPatientRecord.aspx");
             routes.MapPageRoute("reportappointment", "AppointmentPrint", "~/AppointmentReport.aspx");
         }
