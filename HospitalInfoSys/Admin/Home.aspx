@@ -182,7 +182,8 @@
                                          <asp:HiddenField ID="hdLastname" Value='<%#Eval("Lastname") %>' runat="server"></asp:HiddenField>
                                          <asp:HiddenField ID="hdBirthDate" Value='<%#Eval("BirthDate") %>' runat="server"></asp:HiddenField>
                                          <asp:HiddenField ID="hdSex" Value='<%#Eval("Sex") %>' runat="server"></asp:HiddenField>
-                                      <asp:LinkButton ID="btn_select" CssClass="btn btn-primary btn-xs "  CommandArgument='<%# Eval("ID") %>' onclick="btn_select_Click"  runat="server" >Manage</asp:LinkButton>
+                                         <asp:HiddenField ID="hduserid" Value='<%#Eval("userid") %>' runat="server"></asp:HiddenField>
+                                         <asp:LinkButton ID="btn_select" CssClass="btn btn-primary btn-xs "  CommandArgument='<%# Eval("ID") %>' onclick="btn_select_Click"  runat="server" >Manage</asp:LinkButton>
                                             <asp:LinkButton ID="btn_newpat" CssClass="btn btn-success btn-xs "  CommandArgument='<%# Eval("ID") %>' onclick="btn_newpat_Click"  runat="server" >New Patient</asp:LinkButton>
                                       <asp:LinkButton ID="btn_delete" CssClass="btn btn-danger btn-xs " onclick="btn_delete_Click" runat="server"
                                       OnClientClick="return getConfirmation_verify();"

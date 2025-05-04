@@ -244,8 +244,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin\Billing.aspx" />
+    <Content Include="Admin\ChargeList.aspx" />
     <Content Include="Admin\Contacts.aspx" />
+    <Content Include="Admin\DoctorAchievements.aspx" />
     <Content Include="Admin\Home.aspx" />
+    <Content Include="Admin\ManageBill.aspx" />
     <Content Include="Admin\ManagePatient.aspx" />
     <Content Include="Admin\ManageUser.aspx" />
     <Content Include="Admin\Patients.aspx" />
@@ -254,6 +258,7 @@
     <Content Include="Admin\Services.aspx" />
     <Content Include="Appointment.aspx" />
     <Content Include="AppointmentReport.aspx" />
+    <Content Include="Auth.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -286,6 +291,10 @@
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.aspx" />
     <Content Include="Migration.aspx" />
+    <Content Include="Patient\Changepass.aspx" />
+    <Content Include="Patient\MyHome.aspx" />
+    <Content Include="Patient\MyRecord.aspx" />
+    <Content Include="PrintSOA.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -314,6 +323,10 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Shared\Calendar.aspx" />
+    <Content Include="Shared\ChangePass.aspx" />
+    <Content Include="Shared\calendar\index.global.js" />
+    <Content Include="Shared\calendar\index.global.min.js" />
     <Content Include="SignUp.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
@@ -323,6 +336,20 @@
     <Content Include="SiteAdmin.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Billing.aspx.cs">
+      <DependentUpon>Billing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Billing.aspx.designer.cs">
+      <DependentUpon>Billing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ChargeList.aspx.cs">
+      <DependentUpon>ChargeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ChargeList.aspx.designer.cs">
+      <DependentUpon>ChargeList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Contacts.aspx.cs">
       <DependentUpon>Contacts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -330,12 +357,26 @@
     <Compile Include="Admin\Contacts.aspx.designer.cs">
       <DependentUpon>Contacts.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\DoctorAchievements.aspx.cs">
+      <DependentUpon>DoctorAchievements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DoctorAchievements.aspx.designer.cs">
+      <DependentUpon>DoctorAchievements.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageBill.aspx.cs">
+      <DependentUpon>ManageBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageBill.aspx.designer.cs">
+      <DependentUpon>ManageBill.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ManagePatient.aspx.cs">
       <DependentUpon>ManagePatient.aspx</DependentUpon>
@@ -402,6 +443,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Auth.aspx.cs">
+      <DependentUpon>Auth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth.aspx.designer.cs">
+      <DependentUpon>Auth.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -441,7 +489,52 @@
     <Compile Include="Migration.aspx.designer.cs">
       <DependentUpon>Migration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Patient\Changepass.aspx.cs">
+      <DependentUpon>Changepass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Patient\Changepass.aspx.designer.cs">
+      <DependentUpon>Changepass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\MyHome.aspx.cs">
+      <DependentUpon>MyHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Patient\MyHome.aspx.designer.cs">
+      <DependentUpon>MyHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\MyRecord.aspx.cs">
+      <DependentUpon>MyRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Patient\MyRecord.aspx.designer.cs">
+      <DependentUpon>MyRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintSOA.aspx.cs">
+      <DependentUpon>PrintSOA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintSOA.aspx.designer.cs">
+      <DependentUpon>PrintSOA.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shared\Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shared\Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\ChangePass.aspx.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shared\ChangePass.aspx.designer.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\GetAppointments.ashx.cs">
+      <DependentUpon>GetAppointments.ashx</DependentUpon>
+    </Compile>
     <Compile Include="SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -470,6 +563,14 @@
     <Compile Include="SiteAdmin.Master.designer.cs">
       <DependentUpon>SiteAdmin.Master</DependentUpon>
     </Compile>
+    <Compile Include="SitePatient.Master.cs">
+      <DependentUpon>SitePatient.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SitePatient.Master.designer.cs">
+      <DependentUpon>SitePatient.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserHelper.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -480,7 +581,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="images\" />
+    <Folder Include="images\doctor\" />
     <Folder Include="log\" />
     <Folder Include="reports\pdf\appointment\" />
     <Folder Include="reports\pdf\patient\" />
@@ -490,6 +591,8 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="SitePatient.Master" />
+    <Content Include="Shared\GetAppointments.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

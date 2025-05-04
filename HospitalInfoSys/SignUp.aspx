@@ -39,9 +39,9 @@
       </div>
            
        <div class="form-group row">
-            <div class="col-sm-4">
+            <div class="col-sm-4"  style="display:none;">
                 <label class="form-label">Position</label>
-                <asp:TextBox ID="txtPosition" runat="server" CssClass="form-control" placeholder="Enter Position"></asp:TextBox>
+                <asp:TextBox ID="txtPosition" runat="server" CssClass="form-control" placeholder="Opti"></asp:TextBox>
             </div>
            <div class="col-sm-4">
                 <label class="form-label">Email</label>

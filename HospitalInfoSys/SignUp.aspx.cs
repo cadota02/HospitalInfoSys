@@ -31,7 +31,7 @@ namespace HospitalInfoSys
                 string address = txtAddress.Text.Trim();
                 string contactNo = txtContactNo.Text.Trim();
                 string email = txtEmail.Text.Trim();
-                string role = "Doctor"; // Default role based on position
+                string role = "Patient"; // Default role based on position
                 int isApproved = 0; // Approval pending
 
              

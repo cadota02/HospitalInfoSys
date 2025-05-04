@@ -1,0 +1,18 @@
+-------------------------------------------------
+Error Log - 05:15 PM
+WebPage Name: Appointment
+Message: An item with the same key has already been added.
+Stack Trace:    at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at MySql.Data.MySqlClient.MySqlPoolManager.<GetPoolAsync>d__21.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at MySql.Data.MySqlClient.MySqlConnection.<OpenAsync>d__91.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at HospitalInfoSys.Appointment.LoadDoctorsDropdown() in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Appointment.aspx.cs:line 131
+-------------------------------------------------

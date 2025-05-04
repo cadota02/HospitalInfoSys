@@ -9,12 +9,26 @@ namespace HospitalInfoSys
     public partial class Appointment : System.Web.UI.Page
     {
         string connString = ConfigurationManager.ConnectionStrings["myconnection"].ConnectionString;
+     
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack)
             {
-                linkprint.Visible = false;
+                if (!User.Identity.IsAuthenticated)
+                {
+
+                }
+                    linkprint.Visible = false;
                 LoadDoctorsDropdown();
+                int userId = UserHelper.GetCurrentUserId();
+
+                if (userId == -1)
+                {
+                    Response.Write("<script>alert('Please signup before you can book appointment.');</script>");
+                    // Response.Redirect("Login.aspx");
+                    // return;
+                }
+
             }
         }
         protected void SubmitAppointment(object sender, EventArgs e)
@@ -33,9 +47,9 @@ namespace HospitalInfoSys
             string preferredDoctorName = PreferredDoctorID.SelectedItem.Text;
             string appointmentDateTime = AppointmentDateTime.Text;
             string reason = Reason.Text;
-
+            int userId = UserHelper.GetCurrentUserId();
             // Set the MySQL connection string (ensure you update this with your credentials)
-       
+
 
             using (MySqlConnection conn = new MySqlConnection(connString))
             {
@@ -45,9 +59,9 @@ namespace HospitalInfoSys
                     conn.Open();
 
                     string query = @"INSERT INTO appointments 
-                                       (Firstname, Middlename, Lastname, Sex, BirthDate, Email, ContactNo, Address, PreferredDoctorID, AppointmentDateTime, Reason, Status, AppointmentDateApproved, AppointmentRemarks, AppointmentNumber)
+                                       (Firstname, Middlename, Lastname, Sex, BirthDate, Email, ContactNo, Address, PreferredDoctorID, AppointmentDateTime, Reason, Status, AppointmentDateApproved, AppointmentRemarks, AppointmentNumber, userid)
                                           VALUES 
-                                        (@Firstname, @Middlename, @Lastname, @Sex, @BirthDate, @Email, @ContactNo, @Address, @PreferredDoctorID, @AppointmentDateTime, @Reason, 'Pending', @AppointmentDateApproved, @AppointmentRemarks, @AppointmentNumber);";
+                                        (@Firstname, @Middlename, @Lastname, @Sex, @BirthDate, @Email, @ContactNo, @Address, @PreferredDoctorID, @AppointmentDateTime, @Reason, 'Pending', @AppointmentDateApproved, @AppointmentRemarks, @AppointmentNumber,@userid);";
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@Firstname", firstname);
@@ -64,7 +78,7 @@ namespace HospitalInfoSys
                         cmd.Parameters.AddWithValue("@AppointmentDateApproved", DBNull.Value);
                         cmd.Parameters.AddWithValue("@AppointmentRemarks", DBNull.Value);
                         cmd.Parameters.AddWithValue("@AppointmentNumber", appointmentNumber);
-
+                        cmd.Parameters.AddWithValue("@userid", userId);
                         cmd.ExecuteNonQuery();
                     }
 

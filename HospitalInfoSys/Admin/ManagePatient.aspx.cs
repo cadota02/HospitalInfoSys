@@ -16,6 +16,7 @@ namespace HospitalInfoSys.Admin
 
         string connString = ConfigurationManager.ConnectionStrings["myconnection"].ConnectionString;
         protected string statusentry = "New";
+        static int userIDS = 0;
         public void ShowMessage(string message, string jsfunction)
         {
             ScriptManager.RegisterStartupScript(this, this.GetType(), "Message", "alert('" + message + "'); " + jsfunction + "", true);
@@ -37,6 +38,7 @@ namespace HospitalInfoSys.Admin
                 }
                 else
                 {
+                    userIDS = UserHelper.GetCurrentUserId();
                     GenerateHealthNo();
                     txtDateRegistered.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 }
@@ -183,8 +185,8 @@ namespace HospitalInfoSys.Admin
                             con.Open();
 
                             string query = @"INSERT INTO patientlist 
-                                    (HEALTHNO, FIRSTNAME, LASTNAME, MIDDLENAME, ADDRESS, CONTACTNO, EMAIL, SEX, BIRTHDATE, OCCUPATION, CPNAME, CPCONTACTNO, DATEREGISTERED)
-                                    VALUES (@HEALTHNO, @FIRSTNAME, @LASTNAME, @MIDDLENAME, @ADDRESS, @CONTACTNO, @EMAIL, @SEX, @BIRTHDATE, @OCCUPATION, @CPNAME, @CPCONTACTNO, @DATEREGISTERED); 
+                                    (HEALTHNO, FIRSTNAME, LASTNAME, MIDDLENAME, ADDRESS, CONTACTNO, EMAIL, SEX, BIRTHDATE, OCCUPATION, CPNAME, CPCONTACTNO, DATEREGISTERED,userid)
+                                    VALUES (@HEALTHNO, @FIRSTNAME, @LASTNAME, @MIDDLENAME, @ADDRESS, @CONTACTNO, @EMAIL, @SEX, @BIRTHDATE, @OCCUPATION, @CPNAME, @CPCONTACTNO, @DATEREGISTERED,@userid); 
                                     SELECT LAST_INSERT_ID(); ";
                             MySqlCommand cmd = new MySqlCommand(query, con);
                             AddParameters(cmd);
@@ -257,6 +259,7 @@ namespace HospitalInfoSys.Admin
             cmd.Parameters.AddWithValue("@CPNAME", txtCPName.Text.Trim());
             cmd.Parameters.AddWithValue("@CPCONTACTNO", txtCPContactNo.Text.Trim());
             cmd.Parameters.AddWithValue("@DATEREGISTERED", DateTime.Parse(txtDateRegistered.Text));
+            cmd.Parameters.AddWithValue("@userid", userIDS);
         }
         protected void btnNext_Click(object sender, EventArgs e)
         {

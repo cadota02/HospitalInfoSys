@@ -353,7 +353,6 @@ namespace HospitalInfoSys.Admin
                                         cmd.Parameters.AddWithValue("@userposition", userposition);
                                         cmd.Parameters.AddWithValue("@username", username);
                                         if(txtPassword.Text.Length > 0) { cmd.Parameters.AddWithValue("@password", hashedPassword); }
-                                       
                                         cmd.Parameters.AddWithValue("@address", address);
                                         cmd.Parameters.AddWithValue("@contactNo", contactNo);
                                         cmd.Parameters.AddWithValue("@email", email);

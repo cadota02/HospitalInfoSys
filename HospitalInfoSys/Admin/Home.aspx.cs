@@ -363,7 +363,7 @@ namespace HospitalInfoSys.Admin
             HiddenField hdLastname = (HiddenField)item.FindControl("hdLastname");
             HiddenField hdBirthDate = (HiddenField)item.FindControl("hdBirthDate");
             HiddenField hdSex = (HiddenField)item.FindControl("hdSex");
-        
+            HiddenField hduserid = (HiddenField)item.FindControl("hduserid");
             bool isexist = PatientExists(hdFirstname.Value, hdLastname.Value, DateTime.Parse(hdBirthDate.Value), hdSex.Value);
             if (!isexist)
             {
@@ -407,10 +407,10 @@ namespace HospitalInfoSys.Admin
 
                 string query = @"
                         INSERT INTO patientlist (
-                            HEALTHNO, FIRSTNAME, LASTNAME, MIDDLENAME, ADDRESS, CONTACTNO, EMAIL, SEX, BIRTHDATE, DATEREGISTERED
+                            HEALTHNO, FIRSTNAME, LASTNAME, MIDDLENAME, ADDRESS, CONTACTNO, EMAIL, SEX, BIRTHDATE, DATEREGISTERED,userid
                         )
                         SELECT
-                            @healthno, Firstname, Lastname, Middlename, Address, ContactNo, Email, Sex, BirthDate, CURDATE()
+                            @healthno, Firstname, Lastname, Middlename, Address, ContactNo, Email, Sex, BirthDate, CURDATE(),userid
                         FROM appointments
                         WHERE ID = @AppointmentID;
                     ";

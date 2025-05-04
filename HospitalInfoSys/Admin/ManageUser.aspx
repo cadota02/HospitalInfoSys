@@ -181,12 +181,14 @@
                 <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" placeholder="Enter address"></asp:TextBox>
             </div>
                 <div class="col-sm-3">
-                <label class="form-label">User Role</label>
+                <label class="form-label">User Role </label>
                 <asp:DropDownList ID="dprole" runat="server" CssClass="form-control">
+                       <asp:ListItem Text="Select Role..." Value=""></asp:ListItem>
+                     <asp:ListItem Text="Patient" Value="Patient"></asp:ListItem>
                     <asp:ListItem Text="Doctor" Value="Doctor"></asp:ListItem>
                     <asp:ListItem Text="Nurse" Value="Nurse"></asp:ListItem>
-             
                 </asp:DropDownList>
+                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" InitialValue="" ControlToValidate="dprole" ErrorMessage="Role is required." CssClass="text-danger" Display="Dynamic"  ValidationGroup="add"></asp:RequiredFieldValidator>
             </div>
                 <div class="col-sm-3">
                 <label class="form-label">Status</label>

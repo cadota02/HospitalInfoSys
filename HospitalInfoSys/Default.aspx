@@ -26,7 +26,7 @@
             <div>
                  <h1>St. Joms Hospital</h1>
     <p style="font-size: 20px; margin-top: 10px;">Providing Quality Healthcare Services 24/7</p>
-                <a class="btn btn-success btn-lg" href="Appointment">Book an Appointment</a>
+                <a class="btn btn-success btn-lg" href="SignUp">Book an Appointment? Register Now!</a>
             </div>
         </div>
 

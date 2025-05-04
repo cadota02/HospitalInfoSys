@@ -35,7 +35,7 @@ namespace HospitalInfoSys
 
                 if (dr.Read())
                 {
-                    string dbPass = dr["PasswordHash"].ToString();
+                    string dbPass = dr["PasswordHash"].ToString(); //defaultpass: Admin@123
                     if (BCrypt.Net.BCrypt.Verify(Login2.Password, dbPass))
                     {
                         //    Session["User"] = txtUsername.Text;
