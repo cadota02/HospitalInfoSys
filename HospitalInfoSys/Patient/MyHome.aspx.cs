@@ -37,6 +37,7 @@ namespace HospitalInfoSys.Patient
                         // Response.Redirect("Login.aspx");
                         // return;
                     }
+                    get_userinfo(Page.User.Identity.Name.ToString());
                     linkprint.Visible = false;
                     LoadDoctorsDropdown();
                     bind_record();
@@ -125,7 +126,7 @@ namespace HospitalInfoSys.Patient
             AppointmentDateTime.Text = string.Empty;
             Reason.Text = string.Empty;
             PreferredDoctorID.SelectedIndex = 0;
-
+            get_userinfo(Page.User.Identity.Name.ToString());
             bind_record();
             txt_search.Focus();
         }
@@ -455,6 +456,42 @@ namespace HospitalInfoSys.Patient
                     ErrorLogger.WriteErrorLog(ex);
                 }
             }
+        }
+
+        public void get_userinfo(string username)
+        {
+            //try
+            //{
+            using (MySqlConnection conn = new MySqlConnection(connString))
+            {
+                conn.Open();
+                String cb = "select * from users where Username='" + username + "' ";
+                MySqlCommand cmd = new MySqlCommand(cb);
+                cmd.Connection = conn;
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                if (rdr.Read())
+                {
+                  
+                    Firstname.Text = rdr["Firstname"].ToString();
+                    Middlename.Text = rdr["Middlename"].ToString();
+                    Lastname.Text = rdr["Lastname"].ToString();
+                
+                  
+                    Email.Text = rdr["Email"].ToString();
+                    ContactNo.Text = rdr["ContactNo"].ToString();
+                    Address.Text = rdr["Address"].ToString();
+                 
+                }
+                rdr.Close();
+                conn.Close();
+            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    ShowMessage(ex.Message.ToString(), "");
+
+            //}
+
         }
 
 
