@@ -1,0 +1,19 @@
+-------------------------------------------------
+Error Log - 02:16 PM
+WebPage Name: BillingRecord
+Message: Thread was being aborted.
+Stack Trace:    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at HospitalInfoSys.Admin.Billing.add_invoice(String patrecordid) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\Billing.aspx.cs:line 225
+-------------------------------------------------
+-------------------------------------------------
+Error Log - 02:16 PM
+WebPage Name: BillingRecord
+Message: Thread was being aborted.
+Stack Trace:    at HospitalInfoSys.Admin.Billing.add_invoice(String patrecordid) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\Billing.aspx.cs:line 236
+   at HospitalInfoSys.Admin.Billing.btn_selectpat_Click(Object sender, EventArgs e) in C:\Users\ASUS\source\repos\HospitalInfoSys\HospitalInfoSys\Admin\Billing.aspx.cs:line 192
+-------------------------------------------------
